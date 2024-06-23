@@ -14,4 +14,4 @@ jobs:
 
     - name: Build C Code
       run: |
-        cc mongoose.c -D MG_ARCH=MG_ARCH_UNIX
+        make
