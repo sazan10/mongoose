@@ -14,4 +14,4 @@ jobs:
 
     - name: Build C Code
       run: |
-        cc app.c mongoose.c -D MG_ARCH=MG_ARCH_RTX
+        find src/ -name '*.c' -print0 | xargs -0 -n 1 -I {} cc {} mongoose.c -D MG_ARCH=MG_ARCH_UNIX
