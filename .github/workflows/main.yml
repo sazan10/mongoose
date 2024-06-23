@@ -1,0 +1,17 @@
+name: Linux Build
+
+on: push
+
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        ref: 5084279d81a60d6949aa692aeed89ca60f88c1a6
+
+    - name: Build C Code
+      run: |
+        cc app.c mongoose.c -D MG_ARCH=MG_ARCH_RTX
