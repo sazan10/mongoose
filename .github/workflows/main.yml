@@ -9,9 +9,7 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-      with:
-        ref: 5084279d81a60d6949aa692aeed89ca60f88c1a6
 
     - name: Build C Code
       run: |
-        make
+         cc main.c mongoose.c  
