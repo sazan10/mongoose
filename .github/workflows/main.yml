@@ -13,3 +13,11 @@ jobs:
     - name: Build C Code
       run: |
          cc main.c mongoose.c -D MG_ARCH=MG_ARCH_UNIX  
+    - name: install deps
+      run: | 
+      sudo apt -y update
+      sudo apt -y install build-essential make gcc-arm-none-eabi stlink-tools git cmake gcc-riscv64-unknown-elf
+    - name: Build
+      run: 
+        cd examples/http-server
+        make
