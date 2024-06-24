@@ -18,6 +18,6 @@ jobs:
         sudo apt -y update
         sudo apt -y install build-essential make gcc-arm-none-eabi stlink-tools git cmake gcc-riscv64-unknown-elf
     - name: Build
-      run: 
+      run: |
         cd examples/http-server
         make
