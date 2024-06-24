@@ -12,4 +12,4 @@ jobs:
 
     - name: Build C Code
       run: |
-         cc main.c mongoose.c  
+         cc main.c mongoose.c -D MG_ARCH=MG_ARCH_UNIX  
